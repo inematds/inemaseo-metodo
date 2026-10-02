@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "system_id": "seusite.news",
+  "languages": ["pt-BR", "en", "es"],
+  "description": "Manifesto de conteúdo: um item por página, com as traduções e a URL de cada idioma. Outros sites do ecossistema leem este arquivo para montar páginas-hub com links rastreáveis.",
+  "items": [
+    {
+      "id": "seusite.news:id-da-noticia",
+      "date": "2026-10-02",
+      "category": "cursos",
+      "source_url": "https://fonte-original.com/materia",
+      "translations": {
+        "pt-BR": { "titulo": "Título", "resumo": "Resumo.", "url": "https://news.seusite.com/noticias/id-da-noticia/" },
+        "en": { "titulo": "Title", "resumo": "Summary.", "url": "https://news.seusite.com/en/noticias/id-da-noticia/" },
+        "es": { "titulo": "Título", "resumo": "Resumen.", "url": "https://news.seusite.com/es/noticias/id-da-noticia/" }
+      }
+    }
+  ]
+}

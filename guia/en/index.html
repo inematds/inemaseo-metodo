@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>inemaSEO — your site in the spotlight on Google, Bing and AI search</title>
+<meta name="description" content="The inemaSEO method: 10 steps, scripts and templates to get found on Google, Bing and AI search, with no paid tools and no invented content.">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/inemaseo-metodo/guia/">
+<link rel="alternate" hreflang="en" href="https://inematds.github.io/inemaseo-metodo/guia/en/">
+<link rel="alternate" hreflang="es" href="https://inematds.github.io/inemaseo-metodo/guia/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(226,162,59,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;display:block}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(226,162,59,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px 1fr;gap:16px;margin-bottom:26px}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><span class="emoji">🔎</span> inemaSEO</a>
+  <span class="sep">|</span>
+  <span class="clubpro">
+    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <span class="sep">-</span>
+    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+  </span>
+  <div class="links">
+    <a class="sec" href="#oque">What it is</a>
+    <a class="sec" href="#fluxo">Method</a>
+    <a class="sec" href="#guia">Step by step</a>
+    <a class="sec" href="#inema">At INEMA</a>
+    <a class="sec" href="#relacionados">Projects</a>
+    <span class="lang"><a href="../">PT</a><a class="on" href="./">EN</a><a href="../es/">ES</a></span>
+    <button class="tgl" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+    <a class="btn" href="https://github.com/inematds/inemaseo-metodo" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="chip">SEO + GEO · Google, Bing and AI search</span>
+      <h1>Put your site in the <span class="amb">spotlight</span> with the inemaSEO method</h1>
+      <p class="lead">The method we use across the INEMA ecosystem to get found on Google, Bing and in answers from ChatGPT, Perplexity and Copilot. No paid tools and no invented content: AI agents do the repetitive work, and you make the decisions.</p>
+      <div class="cta">
+        <a class="btn" href="#guia">Start the step by step</a>
+        <a class="btn ghost" href="https://github.com/inematds/inemaseo-metodo" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+    <figure><img src="../assets/banner-en.jpg" alt="Your site in the spotlight — the inemaSEO method"></figure>
+  </div>
+</header>
+
+<section id="oque"><div class="wrap">
+  <span class="chip">What it is</span>
+  <h2>A method, not a trick</h2>
+  <p class="sub">Ten steps that go from an X-ray of your site to notifying the search engines, with ready-made scripts and templates you adapt to your own site.</p>
+  <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="../assets/banner-grade-en.jpg" alt="The inemaSEO method in 10 steps" loading="lazy" style="width:100%;display:block"></figure>
+  <div class="grid g3">
+    <div class="card"><h3>🧱 Foundation first</h3><p>A single canonical, sitemaps with language, robots that let the AIs in, llms.txt and thin pages kept out of the index. Without this, no content pays off.</p></div>
+    <div class="card"><h3>🧾 Real data only</h3><p>Every page is backed by a course, project, event or experiment that exists. The LLM extracts and rewrites; a validator discards whatever is not in the source.</p></div>
+    <div class="card"><h3>📏 Measured without the brand</h3><p>The number that matters is searches that do not include your name: people who did not know you and found you. The weekly export separates them out.</p></div>
+  </div>
+</div></section>
+
+<section id="fluxo"><div class="wrap">
+  <span class="chip">The method</span>
+  <h2>The 10 steps</h2>
+  <p class="sub">In the order we apply them. The details of each one are in <a href="https://github.com/inematds/inemaseo-metodo/blob/main/docs/METODO.md">docs/METODO.md</a> (in Portuguese).</p>
+  <div class="flow">
+    <span>1 Audit</span><span class="arr">→</span>
+    <span>2 Technical foundation</span><span class="arr">→</span>
+    <span>3 Brand-free measurement</span><span class="arr">→</span>
+    <span>4 Entity</span><span class="arr">→</span>
+    <span>5 One territory per site</span><span class="arr">→</span>
+    <span>6 Original content</span><span class="arr">→</span>
+    <span>7 Hubs and internal links</span><span class="arr">→</span>
+    <span>8 Backlinks</span><span class="arr">→</span>
+    <span>9 News with a page</span><span class="arr">→</span>
+    <span>10 Notify and follow up</span>
+  </div>
+  <div class="grid g3" style="margin-top:26px">
+    <div class="card"><h3>1 · Real audit</h3><p>Look at the HTML the server delivers: canonical, hreflang, JSON-LD and how many internal links exist. A page with no links is a page that barely exists.</p></div>
+    <div class="card"><h3>2 · Technical foundation</h3><p>One canonical only (www or not), a sitemap with real <code>lastModified</code>, robots letting the AI crawlers in, <code>llms.txt</code> and a <code>content-index.json</code> manifest per site.</p></div>
+    <div class="card"><h3>3 · Brand-free measurement</h3><p>A weekly Search Console export that separates brand searches, URL inspection and a conversion goal in analytics.</p></div>
+    <div class="card"><h3>4 · Entity</h3><p>A <code>Person</code> and an <code>Organization</code> with a fixed <code>@id</code>, cited by every page and every subdomain.</p></div>
+    <div class="card"><h3>5 · One territory per site</h3><p>Evergreen guide on the main site, news on the news site, events on the events site. One owner page for each search intent.</p></div>
+    <div class="card"><h3>6 · Original content</h3><p>Pillars, question pages with a direct 40–60 word answer, and fact sheets with data extracted from the real page. Keywords validated by score, no paid tool.</p></div>
+    <div class="card"><h3>7 · Hubs and internal links</h3><p>A ladder of links for every new page and hub pages that read the other sites' manifests. A search page keeps an index of links in the HTML.</p></div>
+    <div class="card"><h3>8 · Backlinks</h3><p>Each satellite (course, landing page, README) links to the right page on the main site, in batch and with a dry run.</p></div>
+    <div class="card"><h3>9 · News with a page</h3><p>One URL per news item and language, <code>NewsArticle</code>, an archive that is never pruned, and a minimal body written only with facts from the source.</p></div>
+    <div class="card"><h3>10 · Notify and follow up</h3><p>IndexNow and Bing on every publish (ChatGPT and Copilot use Bing's index), sitemap in Search Console and a weekly read.</p></div>
+  </div>
+</div></section>
+
+<section id="pre"><div class="wrap">
+  <span class="chip">Prerequisites</span>
+  <h2>What you need</h2>
+  <p class="sub">Everything is free. The search accounts need the site to be verified.</p>
+  <div class="grid g3">
+    <div class="card"><h3>Google Search Console</h3><p>A verified domain property and gcloud with application credentials, for the measurement scripts.</p><pre><span class="k">gcloud auth application-default login</span> \
+  --scopes=https://www.googleapis.com/auth/webmasters.readonly,\
+https://www.googleapis.com/auth/cloud-platform</pre></div>
+    <div class="card"><h3>Bing Webmaster + IndexNow</h3><p>Site verified on Bing (you can import it from Search Console) and an IndexNow key published at the root of the site.</p><pre><span class="c"># public key: https://yoursite.com/&lt;key&gt;.txt</span>
+<span class="k">openssl rand -hex 16</span></pre></div>
+    <div class="card"><h3>Local tools</h3><p>git, curl, Python 3 and Node 18+. An AI agent (Claude Code or Codex CLI) for the extraction and writing steps.</p><pre><span class="k">git clone</span> <span class="s">https://github.com/inematds/inemaseo-metodo</span></pre></div>
+  </div>
+</div></section>
+
+<section id="guia"><div class="wrap">
+  <span class="chip">Step by step</span>
+  <h2>Applying it to your site</h2>
+  <p class="sub">The commands are the scripts in this repository. Replace <code>seusite.com</code> with your own domain.</p>
+
+  <div class="step"><div class="b">1</div><div>
+    <h3>Take the X-ray</h3>
+    <p>Redirects, robots, sitemaps, llms.txt and, per page, title, canonical, hreflang, JSON-LD and internal links in the HTML.</p>
+<pre><span class="k">bash tools/auditoria.sh</span> <span class="s">https://www.seusite.com</span> /catalogo/ /sobre/  <span class="c"># report in the terminal</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">2</div><div>
+    <h3>Fix the foundation</h3>
+    <p>Use the templates: <code>templates/robots.txt</code>, <code>templates/llms.txt</code>, <code>templates/content-index.json</code> and <code>templates/jsonld-entidade.json</code>. Canonical, sitemap and JSON-LD on the same host.</p>
+<pre><span class="c"># after publishing, confirm</span>
+<span class="k">bash tools/auditoria.sh</span> <span class="s">https://www.seusite.com</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">3</div><div>
+    <h3>Start measuring without the brand</h3>
+    <p>Run it every week. It produces a CSV of non-brand queries and one summary row per week and site.</p>
+<pre><span class="k">export</span> GSC_SITES=<span class="s">"sc-domain:seusite.com"</span> GSC_MARCA=<span class="s">"seusite|seu nome"</span> GSC_QUOTA_PROJ=<span class="s">"seu-projeto-gcp"</span>
+<span class="k">python3 tools/gsc_semanal.py</span> --dias 7  <span class="c"># dados/gsc/resumo.csv</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">4</div><div>
+    <h3>Pick pages by score</h3>
+    <p>Autocomplete, Google Trends, impressions you already have and the strength of the top 10. GO at 6 points or more, and only if there is a real asset to cite. Table in <code>docs/METODO.md</code>.</p>
+<pre><span class="c"># queries with impressions and no dedicated page = validated topic</span>
+<span class="k">sort -t, -k4 -nr</span> dados/gsc/*_sem-marca.csv | <span class="k">head</span> -30</pre>
+  </div></div>
+
+  <div class="step"><div class="b">5</div><div>
+    <h3>Write with an anti-invention lock</h3>
+    <p>The LLM extracts from the real page (<code>templates/prompt-ficha-extrativa.md</code>, <code>templates/prompt-texto-noticia.md</code>); the validator discards any sentence with no support in the source and any number that does not appear in it.</p>
+<pre><span class="k">node tools/validar_extracao.mjs</span> fonte.txt <span class="s">"Curso com 5 módulos e 12 horas"</span>
+<span class="c"># { apoiada: true, numerosNaFonte: false, ... }  → discard</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">6</div><div>
+    <h3>Link the satellites to the main site</h3>
+    <p>A JSON file with repo and target page. Dry run first; then <code>--apply --commit</code>.</p>
+<pre><span class="k">python3 tools/link_de_volta.py</span> mapa.json --guia <span class="s">https://www.seusite.com/aprender/</span> --guia-rotulo <span class="s">"Guia completo"</span>
+<span class="k">python3 tools/link_de_volta.py</span> mapa.json --apply --commit</pre>
+  </div></div>
+
+  <div class="step"><div class="b">7</div><div>
+    <h3>Publish and notify the search engines</h3>
+    <p>Only URLs that return 200. The script checks first, then sends to IndexNow and, if you have a key, to Bing.</p>
+<pre><span class="k">INDEXNOW_KEY</span>=&lt;key&gt; <span class="k">BING_API_KEY</span>=&lt;key&gt; <span class="k">bash tools/avisar_buscadores.sh</span> urls.txt
+<span class="c"># IndexNow: HTTP 200 · Bing SubmitUrlBatch: HTTP 200</span></pre>
+  </div></div>
+
+  <div class="step"><div class="b">8</div><div>
+    <h3>Check indexing and repeat</h3>
+    <p>Ask Google for the status of each new page; the ones that do not show up get internal links and an indexing request in the console. Before publishing, run the <a href="https://github.com/inematds/inemaseo-metodo/blob/main/docs/CHECKLIST.md">quality checklist</a> (in Portuguese).</p>
+<pre><span class="k">python3 tools/gsc_inspecionar.py</span> sc-domain:seusite.com <span class="s">https://www.seusite.com/nova-pagina/</span>
+<span class="c"># Submitted and indexed | crawled 2026-10-01 | Google canonical ...</span></pre>
+  </div></div>
+</div></section>
+
+<section id="inema"><div class="wrap">
+  <span class="chip">Applied at INEMA</span>
+  <h2>What we did across the ecosystem</h2>
+  <p class="sub">The method ran on the portal (inema.club), the news site and the events site between September and October 2026.</p>
+  <div class="grid g2">
+    <div class="card"><h3>📚 Fact sheets with a real syllabus</h3><p>One page per course in the catalog; dozens enriched with modules extracted from each course's page and validated against the source.</p></div>
+    <div class="card"><h3>🔗 Backlinks in batch</h3><p>Courses published on GitHub Pages now link to their fact sheet and to the guide on the main site.</p></div>
+    <div class="card"><h3>🧭 Pillars and questions</h3><p>A "learn artificial intelligence" guide in PT, EN and ES, pillars on agents and community, and question pages with a direct answer.</p></div>
+    <div class="card"><h3>🗂️ Event and news hubs</h3><p><code>/eventos/</code> and <code>/noticias/</code> pages on the main site, reading each subdomain's manifest.</p></div>
+    <div class="card"><h3>📰 One page per news item</h3><p>Permanent archive, <code>NewsArticle</code>, PT/EN/ES versions and a body written only with facts from the source; no text, <code>noindex</code>.</p></div>
+    <div class="card"><h3>🪪 A single entity</h3><p>Author and organization with a fixed <code>@id</code>, cited by the portal, the knowledge base and the news site.</p></div>
+  </div>
+</div></section>
+
+<section id="relacionados"><div class="wrap">
+  <span class="chip">Related projects</span>
+  <h2>Going further: agents and AI search</h2>
+  <p class="sub">SEO lets your site be found. WebMCP lets AI agents use your site. The projects below complete the path.</p>
+  <div class="grid g3">
+    <div class="card"><h3>🧪 WebMCP Readiness</h3><p>Test whether your site is ready for AI agents: discovery, manifests, tools and best practices.</p><p><a href="https://webmcp.inema.pro/" target="_blank" rel="noopener">webmcp.inema.pro</a></p></div>
+    <div class="card"><h3>🎓 WebMCP Training</h3><p>Five courses, from zero to expert: sites that talk to agents, integration and agent development.</p><p><a href="https://inematds.github.io/webmcp-1-formacao/" target="_blank" rel="noopener">Start with the WebMCP Training</a></p></div>
+    <div class="card"><h3>📡 AIV 2026 — AI Visibility</h3><p>An AEO/GEO playbook: how to get cited by AIs, with the INEMA case.</p><p><a href="https://inematds.github.io/aiv2026/guia/" target="_blank" rel="noopener">See the AIV 2026 guide</a></p></div>
+    <div class="card"><h3>📅 WebMCP at the events</h3><p>The WebMCP area of INEMA Events: get your site ready to talk to agents.</p><p><a href="https://eventos.inema.pro/webmcp/" target="_blank" rel="noopener">eventos.inema.pro/webmcp</a></p></div>
+    <div class="card"><h3>🛠️ claude-seo</h3><p>An SEO analysis skill for Claude Code: technical SEO, content (E-E-A-T), schema, sitemaps and AI search (GEO). Complements the audit in step 1.</p><p><a href="https://github.com/inematds/claude-seo" target="_blank" rel="noopener">github.com/inematds/claude-seo</a></p></div>
+    <div class="card"><h3>🧭 Learn AI</h3><p>The pillar guide of INEMA.CLUB, in three languages, with open learning paths and courses.</p><p><a href="https://www.inema.club/aprender-inteligencia-artificial/" target="_blank" rel="noopener">inema.club/aprender-inteligencia-artificial</a></p></div>
+  </div>
+</div></section>
+
+<section id="roadmap"><div class="wrap">
+  <span class="chip">Cadence</span>
+  <h2>When to do each thing</h2>
+  <p class="sub">SEO pays off in weeks and months, not days. The routine is what produces the result.</p>
+  <div class="phase"><div class="tag">Week 0</div><div class="d"><strong>Audit and foundation</strong><span>X-ray, canonical, sitemaps, robots, llms.txt, entity and measurement turned on.</span></div></div>
+  <div class="phase"><div class="tag">Every page</div><div class="d"><strong>Checklist + ladder + notification</strong><span>Quality checklist, 2–3 older pages pointing to the new one, and a notice to the search engines.</span></div></div>
+  <div class="phase"><div class="tag">Weekly</div><div class="d"><strong>Search Console review</strong><span>Non-brand queries, pages with impressions and no clicks, queries with no dedicated page.</span></div></div>
+  <div class="phase"><div class="tag">Monthly</div><div class="d"><strong>Test on the AIs</strong><span>Ten target questions on ChatGPT and Perplexity: is your site cited?</span></div></div>
+  <div class="phase"><div class="tag">Day 30–60</div><div class="d"><strong>Plan B</strong><span>No indexing, no impressions or no clicks: each symptom has an answer (table in docs/METODO.md).</span></div></div>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <div class="pill">Search Console</div><div class="pill">Bing Webmaster</div><div class="pill">IndexNow</div><div class="pill">schema.org</div><div class="pill">llms.txt</div><div class="pill">Claude Code · Codex</div>
+    <p style="margin-top:18px">inemaSEO · open method, MIT license ·
+      <a href="https://github.com/inematds/inemaseo-metodo">inematds/inemaseo-metodo</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var KEY='inemaseo-metodo-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; }
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      localStorage.setItem(KEY, light?'light':'dark');
+    });
+  })();
+</script>
+</body>
+</html>

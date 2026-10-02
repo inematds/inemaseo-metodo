@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "@id": "https://news.seusite.com/noticias/id-da-noticia/#article",
+  "mainEntityOfPage": "https://news.seusite.com/noticias/id-da-noticia/",
+  "headline": "Título da notícia",
+  "description": "Resumo de uma frase.",
+  "articleBody": "Corpo com 150 a 250 palavras, escrito só com fatos da fonte.",
+  "datePublished": "2026-10-02",
+  "dateModified": "2026-10-02",
+  "inLanguage": "pt-BR",
+  "isBasedOn": "https://fonte-original.com/materia",
+  "publisher": { "@id": "https://www.seusite.com/#organizacao" }
+}

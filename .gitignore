@@ -1,0 +1,6 @@
+*.codex.log
+*.log
+.DS_Store
+node_modules/
+dados/
+__pycache__/

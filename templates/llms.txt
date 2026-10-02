@@ -1,0 +1,20 @@
+# Seu Site
+
+> Uma frase dizendo o que é, para quem e o que entrega. É o que uma IA lê primeiro.
+
+## Principais páginas
+
+- [Início — Português](https://www.seusite.com/)
+- [Home — English](https://www.seusite.com/en/)
+- [Sobre / quem faz](https://www.seusite.com/sobre/)
+- [Catálogo (cursos, produtos, serviços)](https://www.seusite.com/catalogo/)
+
+## Guias (páginas evergreen)
+
+- [Como aprender X do zero](https://www.seusite.com/aprender-x/): o guia pilar.
+- [Perguntas sobre X](https://www.seusite.com/perguntas/): respostas diretas.
+
+## Dados para máquinas
+
+- [Sitemap](https://www.seusite.com/sitemap.xml)
+- [Índice de conteúdo (JSON)](https://www.seusite.com/content-index.json)
