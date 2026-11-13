@@ -12,6 +12,8 @@ AI agents do the repetitive work; the human decides.
 
 Full guide (landing page + step by step): **https://inematds.github.io/inemaseo-metodo/guia/en/**
 
+🎬 Video: https://www.youtube.com/watch?v=RIJ3lUGQJL8
+
 ## The 10 steps
 
 1. **Real audit:** the HTML the server delivers (canonical, hreflang, JSON-LD, internal links).

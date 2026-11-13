@@ -12,6 +12,8 @@ Agentes de IA fazem o trabalho repetitivo; o humano decide.
 
 Guia completo (landing + passo a passo): **https://inematds.github.io/inemaseo-metodo/guia/**
 
+🎬 Vídeo: https://www.youtube.com/watch?v=RIJ3lUGQJL8
+
 ## As 10 etapas
 
 1. **Auditoria real:** o HTML que o servidor entrega (canônico, hreflang, JSON-LD, links internos).
